@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carolina Crickets</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef7e8;
+            color: #263526;
+        }
+
+        header {
+            background: #245c2a;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background: #163d1b;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #a9e89d;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: #d8edcf;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            color: #245c2a;
+        }
+
+        .facts {
+            background: #245c2a;
+            color: white;
+            padding: 35px 20px;
+            margin-top: 30px;
+        }
+
+        .facts h2 {
+            text-align: center;
+        }
+
+        .facts ul {
+            max-width: 700px;
+            margin: auto;
+            line-height: 2;
+            font-size: 18px;
+        }
+
+        footer {
+            background: #163d1b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            background: #245c2a;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #357c3c;
+        }
+
+        #funFact {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🦗 Carolina Crickets</h1>
+        <p>Learn about one of the interesting insects found in the Carolinas!</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#habitat">Habitat</a>
+        <a href="#food">Food</a>
+        <a href="#facts">Facts</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Welcome to the World of Crickets!</h2>
+        <p>
+            Crickets are small insects that are famous for their chirping sounds.
+            They can be found in many parts of North Carolina and South Carolina,
+            especially around grassy areas, gardens, forests, and homes.
+        </p>
+    </section>
+
+    <div class="container" id="about">
+
+        <h2>🦗 About Carolina Crickets</h2>
+
+        <p>
+            Crickets belong to the insect order Orthoptera, which also includes
+            grasshoppers and katydids. They have long antennae, powerful back
+            legs, and bodies designed for jumping.
+        </p>
+
+        <div class="cards">
+
+            <div class="card" id="habitat">
+                <h3>🌳 Where They Live</h3>
+                <p>
+                    Crickets can live in grass, gardens, forests, fields,
+                    under rocks, and sometimes inside buildings.
+                </p>
+            </div>
+
+            <div class="card" id="food">
+                <h3>🍃 What They Eat</h3>
+                <p>
+                    Many crickets eat plants, seeds, fruits, and other
+                    organic material. Some species may also eat small insects.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🎵 Why They Chirp</h3>
+                <p>
+                    Male crickets commonly chirp by rubbing their wings
+                    together. The sound can help attract females.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="facts" id="facts">
+        <h2>⭐ Cricket Facts</h2>
+
+        <ul>
+            <li>Crickets have very long antennae.</li>
+            <li>Their powerful back legs help them jump.</li>
+            <li>Only some cricket species make the familiar loud chirping sounds.</li>
+            <li>Crickets are important food for many birds, reptiles, amphibians, and other animals.</li>
+            <li>Crickets can use their antennae to sense their surroundings.</li>
+        </ul>
+
+        <div style="text-align:center; margin-top:25px;">
+            <button onclick="showFact()">🎲 Give Me a Random Fact</button>
+            <p id="funFact"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>🦗 Carolina Cricket Information Website</p>
+        <p>Made with HTML & CSS</p>
+    </footer>
+
+    <script>
+        const facts = [
+            "Crickets use their antennae to help detect what's around them.",
+            "A cricket's ears are located on its front legs.",
+            "Male crickets usually make the chirping sound.",
+            "Crickets are part of the same insect order as grasshoppers.",
+            "Many animals eat crickets, making them an important part of the food chain."
+        ];
+
+        function showFact() {
+            const randomNumber = Math.floor(Math.random() * facts.length);
+            document.getElementById("funFact").textContent = facts[randomNumber];
+        }
+    </script>
+
+</body>
+</html>
